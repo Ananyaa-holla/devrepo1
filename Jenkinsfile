@@ -10,6 +10,7 @@ sudo docker push ananyaahollab/jenkinsrepo:latest'''
     }
 
     stage('Deploy') {
+      agent any
       steps {
         sh 'sudo docker run -d -p ananyaahollab/jenkinsrepo:latest'
       }
